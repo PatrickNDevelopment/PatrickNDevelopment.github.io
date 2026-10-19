@@ -12,3 +12,6 @@
   responsive image sets yet.
 - **Open Graph images** reuse project screenshots rather than purpose-made 1200 × 630 images.
 - Tested in Microsoft Edge (Chromium) on Windows; no Firefox, Safari or screen-reader session.
+- **Acceptance reviews are AI sessions.** The 11B audit, like each project's review, was done by a
+  separate Claude Code session; there has been no human code, security or accessibility audit.
+- In dark mode the navy header band is close to the page background, so its edge is faint.

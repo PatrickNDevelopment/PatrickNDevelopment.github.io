@@ -1,8 +1,9 @@
 # Handoff
 
-**State:** v0.1 on branch `phase/11a-build`, built and verified by the builder on 2026-10-19 (see
-[test-report.md](test-report.md)). Not pushed, not published, no remote. Awaiting the independent
-site audit (prompt 11B).
+**State:** v0.1 on branch `phase/11a-build`, built on 2026-10-19 and accepted by the independent site
+audit (prompt 11B) the same day: 4 P1 and 7 P2 defects fixed with regression tests (see
+[site-audit.md](site-audit.md) and [test-report.md](test-report.md)). Not pushed, not published, no
+remote. Ready for the owner's publication review.
 
 ## Run
 
@@ -32,10 +33,10 @@ Set `status: 'published'`, `repo`, `demo`, `verified` and `commit` in `src/conte
 
 ## Release blockers before publication
 
-1. Independent site audit (11B).
-2. Owner answers to the open questions in [implementation-report.md](implementation-report.md) and
+1. Owner answers to the open questions in [implementation-report.md](implementation-report.md) and
    explicit approval to create the repository and enable Pages.
 
 ## Next action
 
-Run prompt 11B on this branch.
+Owner publication review of the site (wording, open questions), then, only with explicit approval,
+create the repository, push and enable Pages, and live-check the published site.
