@@ -18,6 +18,14 @@ export interface Route {
   inSitemap: boolean;
 }
 
+/** Meta description: at most 300 characters, cut at a word boundary with an ellipsis. */
+export function summary(text: string, max = 300): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  const space = cut.lastIndexOf(' ');
+  return `${(space > 0 ? cut.slice(0, space) : cut).replace(/[\s,;:.]+$/, '')}…`;
+}
+
 export function routes(): Route[] {
   return [
     {
@@ -32,7 +40,7 @@ export function routes(): Route[] {
       path: `/projects/${p.slug}/`,
       file: `projects/${p.slug}/index.html`,
       title: `${p.name}: ${p.featured ? 'case study' : 'project'} · ${SITE.handle}`,
-      description: `${p.tagline} ${p.problem}`.slice(0, 300),
+      description: summary(`${p.tagline} ${p.problem}`),
       image: p.shots[0]?.file ?? 'profit-lab--desktop-products.png',
       inSitemap: true,
     })),

@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
     ],
     choices: [
       'Money as decimal strings (decimal.js), each fee line rounded half-up to the cent, gates compared exactly: a displayed 15.00% that is really 14.996% must not pass.',
-      'Break-even found by an exact scan of the one-cent band that per-line rounding can move.',
+      'Break-even found by an exact scan of the price band that per-line cent rounding can affect, so the lowest qualifying cent is exact even at high fee rates.',
       'A blank cost means unknown, never zero; ranking only among qualifying rows.',
       'zod only at the persistence boundary; a small, fully tested CSV parser instead of a dependency.',
     ],
@@ -130,7 +130,7 @@ export const PROJECTS: Project[] = [
     ],
     challenge: {
       title: 'Two implementations that must agree',
-      body: 'The first differential fuzz run found 212 mismatches that the hand-written vectors had missed. Each was resolved from the spec text and recorded as a decision. The independent review later found that the Python and TypeScript CSV importers disagreed on eight input classes; they are now held to shared vectors and a second differential fuzz.',
+      body: 'The first differential fuzz run found 212 mismatches in 940 generated cases that the existing golden vectors had missed. Each was resolved from the spec text and recorded as a decision. The independent review later found that the Python and TypeScript CSV importers disagreed on eight input classes; they are now held to shared vectors and a second differential fuzz.',
     },
     results: [
       '706 Vitest and 1,578 pytest tests; ruff and mypy --strict clean.',
@@ -206,7 +206,7 @@ export const PROJECTS: Project[] = [
     },
     results: [
       '221 Vitest and 51 pytest tests; ruff and mypy --strict clean.',
-      '218 hand-derived and golden vectors, fuzz seeds with 0 mismatches.',
+      '218 of 218 golden vectors agree between the TypeScript and Python engines; differential fuzz with 0 mismatches.',
       '29 Playwright tests under /source-trace/.',
       'Independent acceptance review: 7 defects fixed with regression tests.',
       'Published 2026-10-15: CI green on the first run (three jobs), Pages deployed, live check passed.',
@@ -259,7 +259,7 @@ export const PROJECTS: Project[] = [
       'Explainer videos need simple diagrams (stick figures, arrows, regions) that look hand-drawn, can be edited, and come out identical every time they are exported, so a revision does not change the drawing everywhere else.',
     features: [
       'Eight templates (for example siege, trade route, alliance formation, timeline) with your own faction names and colours.',
-      'Canvas editor with drag, an inspector with labelled inputs, and full keyboard control.',
+      'Canvas editor with drag, an inspector with labelled inputs, and keyboard control (arrow keys move objects and labels, Delete, undo and redo).',
       'Movement and draw-on animation with a time slider; playback respects reduced-motion settings.',
       'Undo and redo (200 steps), strict scene JSON import, static or animated SVG export, presets.',
       'Visual QA: off-canvas objects, safe-area violations, label overlap and colour contrast.',
@@ -356,8 +356,8 @@ export const PROJECTS: Project[] = [
       'Indicators (volatility, RSI, volume shocks) and lagged correlations labelled as co-movement, never causation.',
     ],
     choices: [
-      'Hand-built SVG charts; daily data with publication dates kept separate from event dates.',
-      'Hand-computed reference values in the tests for RSI, volatility, volume z-scores and CAR.',
+      'SVG charts drawn without a chart library; daily data with publication dates kept separate from event dates.',
+      'Independently worked-out reference values in the tests for RSI, volatility, volume z-scores and CAR.',
     ],
     results: [
       '54 Vitest tests and 15 Playwright tests.',
@@ -419,7 +419,7 @@ export const PROJECTS: Project[] = [
     shots: [
       {
         file: 'script-audit--audits-desktop.png',
-        alt: 'ScriptAudit audit findings next to the script',
+        alt: 'ScriptAudit spoken-readability findings with a side-by-side preview of a suggested change',
         device: 'desktop',
       },
     ],
@@ -445,7 +445,7 @@ export const PROJECTS: Project[] = [
     ],
     results: [
       '37 Vitest and 21 pytest tests; 7 Playwright tests.',
-      'Independent acceptance review on 2026-10-19: 10 defects fixed, every cluster score recomputed by hand.',
+      'Independent acceptance review on 2026-10-19: 10 defects fixed; every cluster score recomputed independently from its breakdown.',
     ],
     stack: [
       'TypeScript',

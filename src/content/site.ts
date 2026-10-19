@@ -8,7 +8,7 @@ export const SITE = {
   origin: 'https://patrickndevelopment.github.io',
   title: 'PatrickNDevelopment · tested web software',
   description:
-    'Case studies of browser applications and small Python services built around exact arithmetic, traceable evidence and deterministic behaviour, each with its tests and an independent acceptance review.',
+    'Case studies of browser applications and small Python services built around exact arithmetic, traceable evidence and deterministic behaviour, implemented with AI assistance (Claude Code), each with its tests and a separate acceptance review.',
 };
 
 export const SKILLS: { area: string; items: string[]; evidence: string }[] = [
@@ -59,7 +59,7 @@ export const APPROACH: { title: string; body: string }[] = [
   },
   {
     title: 'Independent acceptance',
-    body: 'After each build, a separate review session that did not write the code re-runs everything from a clean clone, tries to break the main journeys, and fixes what it finds with regression tests. The findings are listed in each repository’s test report.',
+    body: 'After each build, a separate Claude Code session that did not write the code re-runs everything from a clean clone, tries to break the main journeys, and fixes what it finds with regression tests. It is an AI review, not a human code audit; the findings and the commands it ran are listed in each repository’s test report.',
   },
   {
     title: 'Data validation',
@@ -67,6 +67,6 @@ export const APPROACH: { title: string; body: string }[] = [
   },
   {
     title: 'Responsible AI',
-    body: 'The code was implemented with Claude Code under my specification and review, and each repository says so in AI_ASSISTANCE.md. Inside the apps, AI is optional and off by default; where it exists it only suggests drafts that a person must accept, and nothing claims to verify truth or predict outcomes.',
+    body: 'The specifications, code, tests and documentation were written with Claude Code, Anthropic’s coding agent, under my direction and review; none of it is presented as written by hand, and each repository says so in AI_ASSISTANCE.md. Inside the apps, AI is optional and off by default; where it exists it only suggests drafts that a person must accept, and nothing claims to verify truth or predict outcomes.',
   },
 ];

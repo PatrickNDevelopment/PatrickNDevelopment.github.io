@@ -9,7 +9,8 @@
   --navy: #1d3b53;
   --accent: #1d5f8a;
   --accent-ink: #ffffff;
-  --gold: #b07d12;
+  /* 5.2:1 on --surface-2 and more on --bg: small bold eyebrow text must reach 4.5:1 */
+  --gold: #7d5800;
   --ok: #17663a;
   --ok-bg: #e3f3e8;
   --pending: #6b4a00;
@@ -221,8 +222,14 @@ main {
   color: var(--gold);
   margin: 0 0 0.6rem;
 }
-.hero .eyebrow {
+.hero .eyebrow,
+.case-head .eyebrow {
   color: #f2c14e;
+}
+/* the default focus colour is too dark on navy; gold reaches 6.9:1 there */
+.hero :focus-visible,
+.case-head :focus-visible {
+  outline-color: #f2c14e;
 }
 .facts {
   display: flex;

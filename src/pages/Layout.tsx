@@ -46,8 +46,8 @@ export function Layout({
             <a href={SITE.github}>GitHub</a>.
           </p>
           <p className="muted">
-            Implemented with AI assistance (Claude Code) under the owner&apos;s specification and
-            review. MIT licence.
+            Implemented with AI assistance (Claude Code) under the owner&apos;s direction and
+            review; acceptance reviews are separate AI sessions, not human audits. MIT licence.
           </p>
         </div>
       </footer>

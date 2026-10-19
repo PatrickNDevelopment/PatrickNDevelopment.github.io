@@ -56,8 +56,9 @@ export function HomePage() {
           <p className="lead">
             Browser applications and small Python services where correctness is the feature: exact
             money math, citations tied to the passage they quote, drawings that export identically
-            every time, workflows whose every step can be replayed. Each project comes with its
-            architecture notes, automated tests and an independent acceptance review.
+            every time, workflows whose every step can be replayed. The code is implemented with AI
+            assistance (Claude Code) under my direction and review; each project comes with its
+            architecture notes, automated tests and an acceptance review by a separate AI session.
           </p>
           <ul className="links">
             <li>
@@ -81,7 +82,7 @@ export function HomePage() {
               <dd>{PROJECTS.filter((p) => p.status === 'published').length}</dd>
             </div>
             <div>
-              <dt>Independent reviews</dt>
+              <dt>Separate AI review sessions</dt>
               <dd>
                 {PROJECTS.length} of {PROJECTS.length}
               </dd>
@@ -140,7 +141,8 @@ export function HomePage() {
 
           <h2 id="more-h">More projects</h2>
           <p className="muted">
-            Each passed the same build and independent review process; none is published yet.
+            Each passed the same build and separate review process; none is published yet, so they
+            have no public links.
           </p>
           <ul className="cards" aria-labelledby="more-h">
             {secondary.map((p) => (
@@ -236,7 +238,10 @@ export function ProjectPage({ p }: { p: Project }) {
           {hero ? (
             <figure className="shot">
               <Img shot={hero} eager />
-              <figcaption>{hero.alt}. Screenshot of the implemented application.</figcaption>
+              <figcaption>
+                {hero.alt}. Screenshot of the implemented application with its synthetic sample
+                data.
+              </figcaption>
             </figure>
           ) : null}
           <section aria-labelledby="problem-h">
@@ -261,8 +266,9 @@ export function ProjectPage({ p }: { p: Project }) {
             <h2 id="results-h">Tested results</h2>
             <List items={p.results} />
             <p className="small muted">
-              Last recorded verification {p.verified}, commit <code>{p.commit}</code>. The full
-              commands and outcomes are in the repository&apos;s <code>docs/test-report.md</code>.
+              Last recorded verification {p.verified}; latest recorded commit{' '}
+              <code>{p.commit}</code>. The full commands and outcomes are in the repository&apos;s{' '}
+              <code>docs/test-report.md</code>.
             </p>
           </section>
           {rest.length ? (
@@ -290,9 +296,10 @@ export function ProjectPage({ p }: { p: Project }) {
           <section aria-labelledby="ai-h">
             <h2 id="ai-h">How it was made</h2>
             <p>
-              Specified and reviewed by the owner, implemented with Claude Code, then accepted by an
-              independent review session that re-ran every check and fixed what it found. See the
-              repository&apos;s <code>AI_ASSISTANCE.md</code>.
+              Directed and reviewed by the owner; specification, code, tests and documentation
+              written with Claude Code (AI). A separate Claude Code session that did not write the
+              code then re-ran every check and fixed what it found; that is an AI review, not a
+              human code audit. See the repository&apos;s <code>AI_ASSISTANCE.md</code>.
             </p>
           </section>
           <nav className="pager" aria-label="More projects">

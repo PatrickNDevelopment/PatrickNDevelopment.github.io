@@ -11,9 +11,10 @@ are not yet published are deliberately absent; add them as each one is published
 
 I build browser applications and small Python services where correctness is the feature: exact
 money math, citations tied to the passage they quote, deterministic drawings, replayable workflows.
-Every project ships its tests, a one-command verification script and an independent acceptance
-review. The code is implemented with AI assistance (Claude Code) under my specification and review;
-each repository says so in `AI_ASSISTANCE.md`.
+Every project ships its tests, a one-command verification script and an acceptance review by a
+separate AI session that did not write the code. The specifications, code and tests are written with
+AI assistance (Claude Code) under my direction and review; each repository says so in
+`AI_ASSISTANCE.md`.
 
 **Published projects**
 

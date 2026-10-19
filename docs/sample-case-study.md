@@ -32,7 +32,7 @@ A browser-only analyzer (no backend, no live marketplace data):
 | Each fee line rounded half-up to the cent                        | Matches how fees are charged; reproducible with integers  |
 | Exact gate comparison (`net ≥ min% × price`)                     | A displayed 15.00 % that is really 14.996 % must not pass |
 | Blank cost = unknown = incomplete                                | Unknown must never become $0                              |
-| Break-even by scanning the one-cent band rounding can move       | Exact answer without a solver                             |
+| Break-even by scanning the price band cent rounding can affect   | Exact answer without a solver, even at high fee rates     |
 | zod only at the persistence boundary                             | Validates untrusted storage, keeps hot paths simple       |
 
 ## The hard part: proving the money math
@@ -56,5 +56,6 @@ browser; tested in Chromium-based browsers only.
 
 ## How it was made
 
-Specified and reviewed by the owner, implemented with Claude Code, accepted by an independent review
-session that re-ran every check from a clean clone.
+Directed and reviewed by the owner; specification, code, tests and documentation written with Claude
+Code (AI). Accepted by a separate Claude Code session that did not write the code and re-ran every
+check from a clean clone; that is an AI review, not a human code audit.
