@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-15',
-    commit: '03fd70e',
+    commit: '214668e',
   },
   {
     slug: 'recruit-radar',
@@ -175,7 +175,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-15',
-    commit: '95a5478',
+    commit: 'f9d6103',
   },
   {
     slug: 'source-trace',
@@ -247,7 +247,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-15',
-    commit: '98f4c51',
+    commit: '4f2ac8d',
   },
   {
     slug: 'scene-forge',
@@ -305,7 +305,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '830d23f',
+    commit: 'bddfb65',
   },
   {
     slug: 'workflow-observatory',
@@ -344,7 +344,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'ac11e91',
+    commit: '9a6e646',
   },
   {
     slug: 'signal-scope',
@@ -383,7 +383,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '3052355',
+    commit: '573a546',
   },
   {
     slug: 'script-audit',
@@ -434,7 +434,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'dbca751',
+    commit: 'bb81fcd',
   },
   {
     slug: 'topic-pulse',
@@ -484,7 +484,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '8d1970e',
+    commit: 'de4a801',
   },
   {
     slug: 'recruit-sim',
@@ -520,7 +520,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'c8861a2',
+    commit: '0c30ef1',
   },
   {
     slug: 'story-atlas',
@@ -556,7 +556,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '30295a6',
+    commit: 'bd047b1',
   },
 ];
 
