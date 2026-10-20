@@ -2,8 +2,9 @@
 
 **State:** v0.1 on branch `phase/11a-build`, built on 2026-10-19 and accepted by the independent site
 audit (prompt 11B) the same day: 4 P1 and 7 P2 defects fixed with regression tests (see
-[site-audit.md](site-audit.md) and [test-report.md](test-report.md)). Not pushed, not published, no
-remote. Ready for the owner's publication review.
+[site-audit.md](site-audit.md) and [test-report.md](test-report.md)). Published 2026-10-19 with the
+owner's approval (D-007): https://github.com/PatrickNDevelopment/PatrickNDevelopment.github.io
+(branch `main`), live at https://patrickndevelopment.github.io/.
 
 ## Run
 
@@ -23,19 +24,19 @@ consistency check.
 ## What is absent
 
 - No personal contact details beyond the GitHub profile (none authorized).
-- Not published; CI and Pages never run.
 
 ## Updating after a project is published
 
 Set `status: 'published'`, `repo`, `demo`, `verified` and `commit` in `src/content/projects.ts`; run
 `npm run verify` (the registry check must agree).
 
-## Release blockers before publication
+## Publication
 
-1. Owner answers to the open questions in [implementation-report.md](implementation-report.md) and
-   explicit approval to create the repository and enable Pages.
+CI and the Pages deployment were green on the first run. A live check found every page at HTTP
+200, unknown paths at 404, the trailing-slash redirect, the canonical URL and every outbound
+repository and demo link resolving.
 
 ## Next action
 
-Owner publication review of the site (wording, open questions), then, only with explicit approval,
-create the repository, push and enable Pages, and live-check the published site.
+Keep `src/content/` in step with the projects (the registry check helps); the final
+cross-portfolio audit (prompt 13) is next.

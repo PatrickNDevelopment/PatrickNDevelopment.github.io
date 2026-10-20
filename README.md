@@ -6,9 +6,8 @@ built from the projects' own READMEs, test reports and screenshots.
 
 ![Portfolio home page on desktop](docs/screenshots/home-desktop.png)
 
-> **Status:** v0.1, built and tested locally. **Not published**: this repository has no remote and
-> the site is not live at https://patrickndevelopment.github.io/ yet. All ten projects it presents are
-> published with live demos (2026-10-19).
+> **Status:** v0.1, published 2026-10-19 at **https://patrickndevelopment.github.io/** (GitHub
+> Pages, built by `pages.yml`). All ten projects it presents are published with live demos.
 
 ## How it works
 

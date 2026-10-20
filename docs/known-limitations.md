@@ -1,7 +1,7 @@
 # Known limitations
 
-- **Not published.** No remote, CI and the Pages workflow have not run. Canonical and Open Graph
-  URLs name the user-site address, which is not live yet.
+- **Published 2026-10-19** at https://patrickndevelopment.github.io/; CI and the Pages deploy were
+  green on the first run.
 
 - **Content is maintained by hand** from each project's documents; the local registry check catches
   status, commit and demo-URL drift but not wording drift in the longer descriptions.

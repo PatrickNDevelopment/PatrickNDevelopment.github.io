@@ -75,3 +75,13 @@ page) and 404 at 1280 px; home, work and case study (SourceTrace) at 375 px.
 - The site is not published; CI and the Pages workflow have never run; external links were not
   fetched by the tests (they were checked against the registry's published list).
 - No Firefox, Safari or screen-reader session.
+
+## Publication (2026-10-19)
+
+- `gh repo create PatrickNDevelopment/PatrickNDevelopment.github.io --public --source . --push` from
+  `main` at 26b78c6; Pages enabled with `build_type=workflow`.
+- First CI run and first Pages deployment: success.
+- Live check with `curl`: `/`, three project pages, `/404.html`, `/sitemap.xml`, `/robots.txt`,
+  `/favicon.svg` at 200; `/no/such/page` at 404; `/projects/profit-lab` 301 to the trailing-slash
+  URL; canonical `https://patrickndevelopment.github.io/`; every outbound link on the home page and the
+  SceneForge page resolved with 200.
