@@ -23,7 +23,6 @@ consistency check.
 ## What is absent
 
 - No personal contact details beyond the GitHub profile (none authorized).
-- No links for the seven unpublished projects.
 - Not published; CI and Pages never run.
 
 ## Updating after a project is published

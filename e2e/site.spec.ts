@@ -14,7 +14,18 @@ const PAGES = [
   '/projects/story-atlas/',
   '/404.html',
 ];
-const PUBLISHED = ['profit-lab', 'recruit-radar', 'source-trace'];
+const PUBLISHED = [
+  'profit-lab',
+  'recruit-radar',
+  'source-trace',
+  'scene-forge',
+  'workflow-observatory',
+  'signal-scope',
+  'script-audit',
+  'topic-pulse',
+  'recruit-sim',
+  'story-atlas',
+];
 const ALLOWED_EXTERNAL = new Set([
   'https://github.com/PatrickNDevelopment',
   ...PUBLISHED.map((s) => `https://github.com/PatrickNDevelopment/${s}`),
@@ -52,18 +63,19 @@ test('link audit: every internal link and anchor resolves; external links are on
   expect(internal.size).toBeGreaterThan(15);
 });
 
-test('unpublished projects carry no repository or demo links and say so', async ({ page }) => {
-  await page.goto('/projects/scene-forge/');
-  await expect(page.getByText('Accepted locally · not yet published').first()).toBeVisible();
-  await expect(page.getByText('No public link yet')).toBeVisible();
-  await expect(page.locator('a[href*="github.com/PatrickNDevelopment/scene-forge"]')).toHaveCount(
-    0,
-  );
-  await page.goto('/projects/profit-lab/');
-  await expect(page.getByRole('link', { name: 'Live demo of ProfitLab' })).toHaveAttribute(
-    'href',
-    'https://patrickndevelopment.github.io/profit-lab/',
-  );
+test('each project page links its own published demo and repository', async ({ page }) => {
+  for (const slug of PUBLISHED) {
+    await page.goto(`/projects/${slug}/`);
+    await expect(page.getByText(/^Published · 2026-/).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Live demo of / })).toHaveAttribute(
+      'href',
+      `https://patrickndevelopment.github.io/${slug}/`,
+    );
+    await expect(page.getByRole('link', { name: /^Source on GitHub for / })).toHaveAttribute(
+      'href',
+      `https://github.com/PatrickNDevelopment/${slug}`,
+    );
+  }
 });
 
 test('every page: one h1, no skipped heading levels, images with alt and size, metadata, no scripts', async ({

@@ -141,8 +141,8 @@ export function HomePage() {
 
           <h2 id="more-h">More projects</h2>
           <p className="muted">
-            Each passed the same build and separate review process; none is published yet, so they
-            have no public links.
+            Each passed the same build and separate review process and is published with a live
+            demo.
           </p>
           <ul className="cards" aria-labelledby="more-h">
             {secondary.map((p) => (

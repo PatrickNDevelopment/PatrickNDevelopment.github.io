@@ -1,8 +1,8 @@
 # Proposal: GitHub profile README
 
 To use it, the owner creates a public repository named `PatrickNDevelopment` (same as the account)
-with this content as `README.md`. **Not created; needs explicit approval.** Links to projects that
-are not yet published are deliberately absent; add them as each one is published.
+with this content as `README.md`. **Not created; needs explicit approval.** Not approved as of
+D-007 (no profile README repository); the list can be extended to all ten published projects.
 
 ---
 

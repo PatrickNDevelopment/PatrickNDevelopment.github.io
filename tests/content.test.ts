@@ -77,11 +77,17 @@ describe('rendered pages', () => {
     expect(routes().filter((r) => r.inSitemap)).toHaveLength(11);
   });
 
-  it('an unpublished project page states its status and has no repository link', () => {
-    const out = html('/projects/scene-forge/');
-    expect(out).toContain('Accepted locally · not yet published');
-    expect(out).toContain('No public link yet');
-    expect(out).not.toContain('github.com/PatrickNDevelopment/scene-forge');
+  it('each project page links its own repository and demo, and only those', () => {
+    for (const p of PROJECTS) {
+      const out = html(`/projects/${p.slug}/`);
+      if (p.status === 'published') {
+        expect(out, p.slug).toContain(`href="https://github.com/PatrickNDevelopment/${p.slug}"`);
+        expect(out, p.slug).toContain(`href="https://patrickndevelopment.github.io/${p.slug}/"`);
+      } else {
+        expect(out, p.slug).toContain('No public link yet');
+        expect(out, p.slug).not.toContain(`github.com/PatrickNDevelopment/${p.slug}`);
+      }
+    }
   });
 
   it('escapes text into attributes and content', () => {

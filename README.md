@@ -7,9 +7,8 @@ built from the projects' own READMEs, test reports and screenshots.
 ![Portfolio home page on desktop](docs/screenshots/home-desktop.png)
 
 > **Status:** v0.1, built and tested locally. **Not published**: this repository has no remote and
-> the site is not live at https://patrickndevelopment.github.io/ yet. Of the ten projects, three are
-> published with live demos; the other seven are verified locally and shown as "not yet published",
-> without links.
+> the site is not live at https://patrickndevelopment.github.io/ yet. All ten projects it presents are
+> published with live demos (2026-10-19).
 
 ## How it works
 

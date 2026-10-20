@@ -253,7 +253,9 @@ export const PROJECTS: Project[] = [
     slug: 'scene-forge',
     name: 'SceneForge',
     tagline: 'A deterministic procedural SVG studio for hand-drawn looking diagrams.',
-    status: 'accepted',
+    status: 'published',
+    repo: `${GH}/scene-forge`,
+    demo: `${PAGES}/scene-forge/`,
     featured: true,
     problem:
       'Explainer videos need simple diagrams (stick figures, arrows, regions) that look hand-drawn, can be edited, and come out identical every time they are exported, so a revision does not change the drawing everywhere else.',
@@ -278,10 +280,10 @@ export const PROJECTS: Project[] = [
       '40 Vitest tests including golden SVG tests.',
       '15 Playwright tests against the production build.',
       'Independent acceptance review on 2026-10-18: 6 defects fixed with regression tests; full verification re-run with exit code 0.',
+      'Published 2026-10-19: CI green on the first run on Linux, GitHub Pages deployed, live check passed.',
     ],
     stack: ['TypeScript', 'React', 'Vite', 'zod', 'SVG', 'Vitest', 'Playwright'],
     limitations: [
-      'Not yet published; CI has not run on GitHub yet.',
       'Illustrations, not maps; label sizes in visual QA are estimates because fonts differ by machine.',
       'Arrows and regions move as a whole (no point editing).',
     ],
@@ -302,14 +304,16 @@ export const PROJECTS: Project[] = [
         device: 'mobile',
       },
     ],
-    verified: '2026-10-18',
-    commit: '6dd1697',
+    verified: '2026-10-19',
+    commit: '830d23f',
   },
   {
     slug: 'workflow-observatory',
     name: 'Workflow Observatory',
     tagline: 'A state-machine studio: approvals, retries, idempotency keys, replay and comparison.',
-    status: 'accepted',
+    status: 'published',
+    repo: `${GH}/workflow-observatory`,
+    demo: `${PAGES}/workflow-observatory/`,
     featured: false,
     problem:
       'Approval and job pipelines fail in subtle ways: a step skips its approval, a retry repeats a side effect, a replay gives a different answer. This simulator makes those rules executable and inspectable.',
@@ -326,10 +330,10 @@ export const PROJECTS: Project[] = [
     results: [
       '37 Vitest tests, including an exhaustive transition matrix and tamper detection; 8 Playwright tests.',
       'Independent acceptance review on 2026-10-19: 5 defects fixed with regression tests, including stale approvals after a reject-and-resubmit loop.',
+      'Published 2026-10-19: CI green on the first run on Linux, GitHub Pages deployed, live check passed.',
     ],
     stack: ['TypeScript', 'React', 'Vite', 'zod', 'Vitest', 'Playwright'],
     limitations: [
-      'Not yet published.',
       'Simulation only: no real queue or distributed execution; roles are labels, not identities.',
     ],
     shots: [
@@ -340,13 +344,15 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'e506494',
+    commit: 'ac11e91',
   },
   {
     slug: 'signal-scope',
     name: 'SignalScope',
     tagline: 'Educational historical event studies with no look-ahead.',
-    status: 'accepted',
+    status: 'published',
+    repo: `${GH}/signal-scope`,
+    demo: `${PAGES}/signal-scope/`,
     featured: false,
     problem:
       'Event studies are easy to get wrong by using information before it was public. SignalScope only uses an event from the first trading session after its publication and always shows the baseline and sample size.',
@@ -362,10 +368,11 @@ export const PROJECTS: Project[] = [
     results: [
       '54 Vitest tests and 15 Playwright tests.',
       'Independent acceptance review on 2026-10-18: 8 defects fixed, including a same-day probability leak into rule decisions.',
+      'Published 2026-10-19: CI green on the first run on Linux, GitHub Pages deployed, live check passed.',
     ],
     stack: ['TypeScript', 'React', 'Vite', 'zod', 'SVG', 'Vitest', 'Playwright'],
     limitations: [
-      'Not yet published. Descriptive and historical only: not investment advice, no forecasts or trading.',
+      'Descriptive and historical only: not investment advice, no forecasts or trading.',
       'Daily data only; sample and example data are synthetic.',
     ],
     shots: [
@@ -375,15 +382,17 @@ export const PROJECTS: Project[] = [
         device: 'desktop',
       },
     ],
-    verified: '2026-10-18',
-    commit: '7d9f0c8',
+    verified: '2026-10-19',
+    commit: '3052355',
   },
   {
     slug: 'script-audit',
     name: 'ScriptAudit',
     tagline:
       'Four deterministic audits for video scripts, with suggestions accepted one at a time.',
-    status: 'accepted',
+    status: 'published',
+    repo: `${GH}/script-audit`,
+    demo: `${PAGES}/script-audit/`,
     featured: false,
     problem:
       'A script draft needs checking for unsupported claims, loose narrative threads, hard-to-say sentences and packaging issues, with every change reviewable and reversible.',
@@ -399,6 +408,7 @@ export const PROJECTS: Project[] = [
     results: [
       '64 Vitest and 31 pytest tests; 13 Playwright tests.',
       'Independent acceptance review on 2026-10-18: 9 defects fixed with regression tests.',
+      'Published 2026-10-19: CI green on the first run on Linux, GitHub Pages deployed, live check passed.',
     ],
     stack: [
       'TypeScript',
@@ -413,7 +423,7 @@ export const PROJECTS: Project[] = [
       'Playwright',
     ],
     limitations: [
-      'Not yet published. Rule-based and English-only; it does not verify facts or predict performance.',
+      'Rule-based and English-only; it does not verify facts or predict performance.',
       'The AI broker was tested only with a fake provider.',
     ],
     shots: [
@@ -423,14 +433,16 @@ export const PROJECTS: Project[] = [
         device: 'desktop',
       },
     ],
-    verified: '2026-10-18',
-    commit: '5b91084',
+    verified: '2026-10-19',
+    commit: 'dbca751',
   },
   {
     slug: 'topic-pulse',
     name: 'TopicPulse',
     tagline: 'Explainable topic scoring from public counts, relative to each channel.',
-    status: 'accepted',
+    status: 'published',
+    repo: `${GH}/topic-pulse`,
+    demo: `${PAGES}/topic-pulse/`,
     featured: false,
     problem:
       'Raw view counts favour big channels. TopicPulse scores topics from rates relative to each channel’s own recent median and shows exactly which videos feed each part of a score.',
@@ -446,6 +458,7 @@ export const PROJECTS: Project[] = [
     results: [
       '37 Vitest and 21 pytest tests; 7 Playwright tests.',
       'Independent acceptance review on 2026-10-19: 10 defects fixed; every cluster score recomputed independently from its breakdown.',
+      'Published 2026-10-19: CI green on the first run on Linux, GitHub Pages deployed, live check passed.',
     ],
     stack: [
       'TypeScript',
@@ -460,7 +473,7 @@ export const PROJECTS: Project[] = [
       'Playwright',
     ],
     limitations: [
-      'Not yet published. The live YouTube API path is untested with a real key.',
+      'The live YouTube API path is untested with a real key.',
       'Scores describe observed public counts; they are not forecasts.',
     ],
     shots: [
@@ -471,13 +484,15 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '6b3f427',
+    commit: '8d1970e',
   },
   {
     slug: 'recruit-sim',
     name: 'RecruitSim',
     tagline: 'Branching recruiting practice with a transparent rubric.',
-    status: 'accepted',
+    status: 'published',
+    repo: `${GH}/recruit-sim`,
+    demo: `${PAGES}/recruit-sim/`,
     featured: false,
     problem:
       'New recruiters need to practise difficult conversations (fee terms, discriminatory requests, consent) safely, with feedback they can trace back to specific choices.',
@@ -493,9 +508,10 @@ export const PROJECTS: Project[] = [
     results: [
       '21 Vitest tests and 14 Playwright tests.',
       'Independent acceptance review on 2026-10-19: 8 defects fixed with regression tests.',
+      'Published 2026-10-19: CI green on the first run on Linux, GitHub Pages deployed, live check passed.',
     ],
     stack: ['TypeScript', 'React', 'Vite', 'zod', 'Vitest', 'Playwright'],
-    limitations: ['Not yet published. Authored branches only; not legal advice; English only.'],
+    limitations: ['Authored branches only; not legal advice; English only.'],
     shots: [
       {
         file: 'recruit-sim--play-desktop.png',
@@ -504,13 +520,15 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '01bee76',
+    commit: 'c8861a2',
   },
   {
     slug: 'story-atlas',
     name: 'StoryAtlas',
     tagline: 'An explorer for a fictional world, with a spoiler filter and content warnings.',
-    status: 'accepted',
+    status: 'published',
+    repo: `${GH}/story-atlas`,
+    demo: `${PAGES}/story-atlas/`,
     featured: false,
     problem:
       'Readers and writers of a long story need a map of characters, events and places that never spoils what they have not read yet.',
@@ -526,11 +544,10 @@ export const PROJECTS: Project[] = [
     results: [
       '17 Vitest tests and 10 Playwright tests.',
       'Independent acceptance review on 2026-10-19: fixes for spoiler leaks, integrity gaps and routing, each with a regression test.',
+      'Published 2026-10-19: CI green on the first run on Linux, GitHub Pages deployed, live check passed.',
     ],
     stack: ['TypeScript', 'React', 'Vite', 'zod', 'SVG', 'Vitest', 'Playwright'],
-    limitations: [
-      'Not yet published. The map uses a simple circular layout suited to small casts.',
-    ],
+    limitations: ['The map uses a simple circular layout suited to small casts.'],
     shots: [
       {
         file: 'story-atlas--map-desktop.png',
@@ -539,7 +556,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '0a792af',
+    commit: '30295a6',
   },
 ];
 

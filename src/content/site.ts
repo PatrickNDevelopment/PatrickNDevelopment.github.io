@@ -48,7 +48,7 @@ export const SKILLS: { area: string; items: string[]; evidence: string }[] = [
   {
     area: 'Delivery',
     items: ['GitHub Actions CI', 'GitHub Pages', 'static builds under a sub-path'],
-    evidence: 'ProfitLab, RecruitRadar and SourceTrace are published with CI and Pages.',
+    evidence: 'All ten projects are published with CI and GitHub Pages.',
   },
 ];
 
