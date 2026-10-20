@@ -90,6 +90,13 @@ describe('rendered pages', () => {
     }
   });
 
+  it('the home page links every published project straight to its demo', () => {
+    const out = html('/');
+    for (const p of PROJECTS.filter((x) => x.status === 'published')) {
+      expect(out, p.slug).toContain(`href="https://patrickndevelopment.github.io/${p.slug}/"`);
+    }
+  });
+
   it('escapes text into attributes and content', () => {
     const out = html('/');
     expect(out).not.toMatch(/content="[^"]*<[^"]*"/);

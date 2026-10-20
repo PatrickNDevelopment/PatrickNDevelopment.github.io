@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-15',
-    commit: '214668e',
+    commit: '570c24a',
   },
   {
     slug: 'recruit-radar',
@@ -155,6 +155,7 @@ export const PROJECTS: Project[] = [
     limitations: [
       'The static demo cannot refresh from job boards; that needs the local backend.',
       'Scores are fixed-weight heuristics with no semantic title matching.',
+      'One score component (weight 10) rises with roles posted 45 or more days ago, labelled “possible urgency signal, not evidence of hiring difficulty”; a long-open posting can lift a company that is otherwise quiet.',
       'Provider payload shapes come from documentation and a one-off live check; automated tests use synthetic payloads.',
     ],
     shots: [
@@ -175,7 +176,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-15',
-    commit: 'f9d6103',
+    commit: 'adb1bfd',
   },
   {
     slug: 'source-trace',
@@ -247,7 +248,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-15',
-    commit: '4f2ac8d',
+    commit: 'f362c28',
   },
   {
     slug: 'scene-forge',
@@ -305,7 +306,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'bddfb65',
+    commit: '6c893d8',
   },
   {
     slug: 'workflow-observatory',
@@ -344,7 +345,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '9a6e646',
+    commit: '7c0af35',
   },
   {
     slug: 'signal-scope',
@@ -383,7 +384,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '573a546',
+    commit: '33c2149',
   },
   {
     slug: 'script-audit',
@@ -434,7 +435,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'bb81fcd',
+    commit: 'a96acad',
   },
   {
     slug: 'topic-pulse',
@@ -484,7 +485,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'de4a801',
+    commit: '516171d',
   },
   {
     slug: 'recruit-sim',
@@ -520,7 +521,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: '0c30ef1',
+    commit: '9db2eb4',
   },
   {
     slug: 'story-atlas',
@@ -556,7 +557,7 @@ export const PROJECTS: Project[] = [
       },
     ],
     verified: '2026-10-19',
-    commit: 'bd047b1',
+    commit: '88905d8',
   },
 ];
 

@@ -154,6 +154,21 @@ export function HomePage() {
                 <p className="small">
                   <Status p={p} />
                 </p>
+                {p.demo ? (
+                  <p className="small card-links">
+                    <a href={p.demo}>
+                      Live demo<span className="sr-only"> of {p.name}</span>
+                    </a>
+                    {p.repo ? (
+                      <>
+                        {' · '}
+                        <a href={p.repo}>
+                          Source<span className="sr-only"> of {p.name} on GitHub</span>
+                        </a>
+                      </>
+                    ) : null}
+                  </p>
+                ) : null}
               </li>
             ))}
           </ul>
